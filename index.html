@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Code Genius</h1>
+      <div class='border'>
+        <div class="lettering">
+          <p>Malibu</p>
+        </div>
+      </div>
+
+    <div class='images-div'>
+     <div class='image'>
+       <img src="genius/chairs.jpg" alt=""/>
+       <p>look at these comfy chairs</p>
+     </div> 
+     <div class='image'>
+       <img src="genius/DolphinHeader.jpg" alt=""/>
+       <p>chill with legit dolphins</p>
+     </div> 
+     <div class='image'>
+       <img src="genius/pinacolada.jpg" alt=""/>
+       <p>sip on that yak</p>
+     </div> 
+    </div>
+      <div class='border'>
+        <div class="lettering">
+          <p>12 - 20 - 2018</p>
+        </div>
+      </div>
+      <button type="submit">Register Now!</button>
+    </div>
+    <div id="modal">
+    </div>
+
+    <script>
+      (function() {
+        var modal = document.getElementById('modal');
+        var pictures = document.getElementsByClassName('image');
+        console.log(pictures);
+
+        function createEvent(picture) {
+          picture.addEventListener('click', function(ev) {
+            addImage(ev);
+          });
+        }
+
+        function addImage(ev) {
+            var modalImage = new Image();
+            modalImage.src = ev.target.src
+            
+            modal.append(modalImage);
+            modal.style.display = "block";
+        }
+
+        function removeImage() {
+            modal.innerHTML = "";
+        }
+
+        for (var i = 0; i < pictures.length; i++) {
+            var picture = pictures[i];
+            createEvent(picture);
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+              removeImage();
+              modal.style.display = 'none';
+          }
+        }
+          
+      })();
+    </script>
+  </body>
+</html>

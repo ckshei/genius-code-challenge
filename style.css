@@ -1,0 +1,82 @@
+html, body {
+  height: 100%;
+  background-image: linear-gradient(to right, #fdc3d8, #fff7b2);
+  font-family: Futura, sans-serif;
+  color: #a80060; }
+  html #modal, body #modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(168, 0, 96, 0.8);
+    display: none; }
+    html #modal img, body #modal img {
+      display: block;
+      margin: 80px auto;
+      border: 10px solid white; }
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  width: 700px;
+  height: 800px;
+  flex-direction: column;
+  align-items: center; }
+  .container h1 {
+    font-size: 80px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-top: 80px;
+    margin-bottom: 0px; }
+  .container .border {
+    border-top: 2px dotted #a80060;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px; }
+    .container .border .lettering {
+      background-color: #a80060;
+      height: 40px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -20px; }
+      .container .border .lettering p {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 5px 0 13px; }
+  .container .images-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; }
+    .container .images-div .image {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .container .images-div .image img {
+        width: 215px;
+        height: 120px;
+        display: block;
+        border: 6px solid white;
+        object-fit: cover; }
+      .container .images-div .image p {
+        width: default;
+        font-size: 14px; }
+  .container button {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #a80060;
+    padding: 8px 14px;
+    color: #a80060;
+    letter-spacing: 2px; }
+
+/*# sourceMappingURL=style.css.map */
